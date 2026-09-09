@@ -1,3 +1,4 @@
+import { images } from "@/constants/images";
 import { Tabs } from "expo-router";
 import { View } from "react-native";
 
@@ -7,7 +8,18 @@ const _layout = () => {
       <Tabs>
         <Tabs.Screen
           name="index"
-          options={{ title: "Home", headerShown: false }}
+          options={{
+            title: "Home",
+            headerShown: false,
+            tabBarIcon: ({ focused }) => (
+              <>
+                <ImageBackground
+                  source={images.home}
+                  style={{ width: 30, height: 30 }}
+                />
+              </>
+            ),
+          }}
         />
         <Tabs.Screen
           name="Search"
