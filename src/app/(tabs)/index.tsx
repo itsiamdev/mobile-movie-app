@@ -1,4 +1,5 @@
-import { ScrollView, View } from "react-native";
+import { Image, ScrollView, View } from "react-native";
+import { icons } from "../../../constants/icons";
 import { images } from "../../../constants/images";
 
 export default function Index() {
@@ -11,7 +12,8 @@ export default function Index() {
         contentContainerStyle={{ paddingBottom: 10, minHeight: "100%" }}
       >
         <Image source={icons.logo} className="w-12 h-10 mt-20 mb-5 mx-auto" />
-        <View></View>
+        <View>
+        </View>
       </ScrollView>
     </View>
   );
