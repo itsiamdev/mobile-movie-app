@@ -1,9 +1,21 @@
-import { Text, View } from "react-native";
-import { SearchBar } from "react-native-screens";
-const SearchBarComponent = () => {
+import { Image, TextInput, View } from "react-native";
+import { icons } from "../constants/icons";
+
+interface Props {
+  placeholder: string;
+  onPress: () => void;
+}
+
+const SearchBar = ({placeholder, onPress}: Props) => {
   return (
-    <View>
-      <Text> </Text>
+    <View className="flex-row items-center bg-dark-200 rounded-full px-5 py-4">
+      <Image source={icons.search} className="size-5" resizeMode="contain" tintColor="#ab8bff" />
+      <TextInput
+        placeholder={placeholder}
+        onPress={onPress}
+        placeholderTextColor="#ab8bff"
+        className="flex-1 ml-2 text-white"
+      />
     </View>
   );
 };

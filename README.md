@@ -17,3 +17,9 @@ npm run android
 ```sh
 npm run web
 ```
+
+# OMDb API
+
+Copy `.env.example` to `.env.local` and set `EXPO_PUBLIC_OMDB_API_KEY` to your OMDb API key. Restart Expo after changing the environment file.
+
+The key is included in the client app bundle, so use an API key with appropriate usage limits.
